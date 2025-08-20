@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{%block homepage%}
+
+</style>
+  <div class="showcase-bottom1">
+  <div class="container-fluid bg-secondary">
+      <br><br><br>
+      <h1 class="display-4 text-white">Final Deathtination!</h1>
+      <p class="lead text-white">A tribute to the Final Destination movie franchise, we analyze deaths in the United States circa 2011 (The year of the final "Final Destination" series)</p>
+      
+      <hr class="my-4">
+      <p class = "text-white">Discover the mashed brains and spilled guts behind this operation...</p>
+      <a id = "learn-button" class="btn btn-primary btn-lg" href="#About" role="button">Learn more</a>
+      <br><br><br><br><br><br><br>
+    </div>
+  </div>
+
+
+<div class="showcase-bottom2">
+  <div data-spy="scroll" data-target="learn-button" data-offset="0">
+    <div class="container-fluid selectstyle">
+      <br>
+      <h1 id= "About" class = "text-light"><center>Meet the Team</center></h1>
+      <br>
+      <div class="row text-center text-light">
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-5 mb-4">
+          <div><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Kiyomi Sugita</h5><span class="small text-uppercase text-muted">CEN, 2022</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-2 col-sm-5 mb-4">
+          <div><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Srikar Voleti</h5><span class="small text-uppercase text-muted">CS, 2023</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-2 col-sm-5 mb-4">
+          <div><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Jimmy Han</h5><span class="small text-uppercase text-muted">CS, 2023</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-2 col-sm-5 mb-4">
+          <div><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Juvenal Ortega</h5><span class="small text-uppercase text-muted">CS, 2022</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>        
+
+        <div class="col-xl-2 col-sm-5 mb-4">
+          <div><img src="https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Grim-Reaper-icon.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Victor Omosor</h5><span class="small text-uppercase text-muted">CEN, 2022</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>        
+         
+      {%for i in range(20)%}
+        <br>
+      {%endfor%}
+      <footer class = "mx-auto">
+          <p class="text-muted">&copy; Grimreaper.com All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+</div>
+{%endblock%}
+

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%block content%}
+<style>
+    .vert {
+       margin-bottom: 2cm;
+    }
+  </style>x
+
+
+<script type="text/javascript">
+
+    window.onload = function () {
+
+    var dps = [
+                {% for key,value in labels.items() %}
+                    {y: {{key}}, label: "{{value}}" },
+                {% endfor %}
+    ];
+
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2", 
+        title:{
+            text: "Leading Cause of Death by Group"
+        },
+        axisY: {
+            title: "Count"
+        },
+        data: [{        
+            type: "column",  
+            showInLegend: true, 
+            legendMarkerColor: "grey",
+            dataPoints: dps
+        }]
+    });
+    chart.render();
+
+    }
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    <div class="showcase-bottom1">
+    <p><h4>Statistics</h4></p>
+    <p><strong>Mean:</strong> {{mean}}</p>
+    <p><strong>Median: </strong>{{median}}</p>
+    <p><strong>Standard Deviation:</strong> {{stdDev}}</p>
+</div>
+{%endblock%}

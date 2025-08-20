@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{%block content%}
+<style>
+    .vert {
+       margin-bottom: 2cm;
+    }
+  </style>x
+
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+var dps = [
+            {% for key,value in labels.items() %}
+                {y: {{value}}, label: "{{key}}" },
+            {% endfor %}
+];
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Month Percentage Breakdown",
+        fontFamily: "sans-serif", 
+        horizontalAlign: "left",
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: dps
+	}]
+});
+chart.render();
+
+}
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <div class="showcase-bottom1">
+
+    <br><br>
+    <p><strong>Top Month:</strong> {{topMonth}}</p>
+</div>
+{%endblock%}

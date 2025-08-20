@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{%block content%}
+<!DOCTYPE html>
+<html>
+<body>
+  
+<br>
+<div class="showcase-bottom2">
+<div class="jumbotron">
+  <h1>Select a parameter</h1>
+
+  <br><br>
+
+  <form action ="#" method = "post">
+    
+    <select class = "bg-light text-dark selectpicker" name="Group">
+      <option value="Race">Race</option>
+      <option value="Sex">Sex</option>
+      <option value="Month">Month</option>
+      <option value="Age">Age</option>
+      <option value="None" selected>Select a Group</option>
+    </select>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <br><br>
+    <input class="btn btn-primary" type="submit" value="Submit">
+    
+  </form>
+
+  </body>
+  </html>
+</div>
+</div>
+
+{% endblock %}

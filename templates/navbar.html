@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{url_for('home')}}">
+    <img src="https://www.freeiconspng.com/uploads/skull-icon-25.png" width="33" height="33" class="d-inline-block align-top" alt="">
+    Final Deathtination
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      
+        <li class="nav-item active"> 
+          <a class="nav-link" href="{{url_for('index')}}"><span class="sr-only">(current)</span>Search</a>
+        </li>
+      
+      
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edit
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+            <a class="dropdown-item" href="{{url_for('insert')}}">Insert</a>
+            <a class="dropdown-item" href="{{url_for('edit')}}">Update</a>
+            <a class="dropdown-item" href="{{url_for('delete')}}">Delete</a>
+          </div>
+        </li>
+      
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Analytics
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{{url_for('findAvg')}}">Average</a>
+            <a class="dropdown-item" href="{{url_for('rank')}}">Ranking</a>
+            <a class="dropdown-item" href="{{url_for('test')}}">Prediction</a>
+            <a class="dropdown-item" href="{{url_for('rates')}}">Group Rates</a>
+            <a class="dropdown-item" href="{{url_for('stats')}}">Leading Cause Stats</a>
+            <a class="dropdown-item" href="{{url_for('month_percentage')}}">Month Percentages</a>
+            
+
+      </div>
+      </li>
+    <div class="container-fluid">
+      <!-- <div class="showcase-top1"> -->
+        <li class="nav-item active dropdown">
+          <a class = "nav-link dropdown-toggle text-danger btn btn-outline-danger margin-left:10px" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">(current)</span>Import</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{url_for('importdata2011')}}">2011</a>
+              <a class="dropdown-item" href="{{url_for('importdata2012')}}">2012</a>
+              <a class="dropdown-item" href="{{url_for('importdata2013')}}">2013</a>
+              <a class="dropdown-item" href="{{url_for('importdata2014')}}">2014</a>
+              <a class="dropdown-item" href="{{url_for('importdata2015')}}">2015</a>
+            </div>
+        </li>
+      <!-- </div> -->
+    </div>
+        <div class="showcase-top1">
+          <li class="nav-item active">
+            <a class = "nav-link text-success btn btn-outline-success" href="{{url_for('backup')}}"><span class="sr-only">(current)</span>Backup</a>
+          </li>
+        </div>
+    </ul>
+  </div>
+
+</nav>

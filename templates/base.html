@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<style>
+  .selectstyle{
+    background-color: rgb(0, 0, 0);
+    text-decoration-color: aliceblue;
+    
+  }
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+.selectstyle
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.vert2 {
+    margin-bottom: 7cm;
+}
+.mv_right{
+    margin-right: 30cm;
+}
+  
+ </style>
+<body class="custombg"> 
+    {% include 'navbar.html' %}
+    
+    
+      {%block homepage%}
+      {%endblock%}  
+    
+    <div class="container-fluid">
+      {%block content%}
+      {%endblock%}  
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.showcase-bottom1', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px'
+      });
+      sr.reveal('.showcase-bottom2', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '100px'
+      });
+      sr.reveal('.showcase-top1', {
+        duration: 2000,
+        origin: 'top',
+        distance: '300px'
+      });
+      
+      sr.reveal('.showcase-left1', {
+        duration: 2000,
+        origin: 'left',
+        distance: '100px'
+      });
+    </script>
+
+    </body>
+</html>
+

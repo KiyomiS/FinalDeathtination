@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+  
+{% block content%}  
+<br>
+
+<div class="jumbotron animate__animated animate__fadeIn">
+<p><h4>Parameters</h4></p>
+<p><h6>Race: {{race}}<br>Sex: {{sex}}<br>Age: {{age}}<br>Month of death: {{month}}<br>Manner of death: {{cause}}</h6></p>
+</div>
+
+<div class="showcase-bottom2">
+<p class ="vert"><center><h2>Total number of deaths by parameter</h2></center></p>
+<p><center><h1>{{inputsum}}</h1></center></p>
+</div>
+
+{%endblock%}

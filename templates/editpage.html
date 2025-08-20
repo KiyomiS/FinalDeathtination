@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{%block content%}
+<style>
+    .vert {
+       margin-bottom: 2cm;
+    }
+  </style>
+<br>
+<div class="jumbotron showcase-bottom2">
+<h1>There are {{totalIndex}} indices</h1>
+<br><br><br><br><br><br>
+</div>
+<form action ="#" method = "post">
+    <p class = "animate__animated animate__slideInDown"><center><h4>Choose index to update</h4>
+      <br>
+      <input name = "newindex">
+      <input type = "submit">
+        </center>
+    </p>
+</form>
+
+  {%if out_of_bounds == 1%}
+    <div class="p text-danger"><center>Index is out of bounds, please try again</center></div>
+    <div class="invalid-feedback"><p class = "text-warning">Out of bounds error</p></div>
+  {%endif%}
+
+{%endblock%}

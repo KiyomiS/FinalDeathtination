@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{%block content%}
+<style>
+    .vert {
+       margin-bottom: 2cm;
+    }
+  </style>x
+
+
+<script type="text/javascript">
+	
+    // { y: 67, label: "Inbox" },
+    
+    
+    window.onload = function () {
+        
+    var dps = [
+                {% for key,value in data.items() %}
+                    {y: {{key}}, label: "{{value}}" },
+                {% endfor %}
+    ];
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title:{
+            text: "Rates",
+            fontFamily: "sans-serif", 
+            horizontalAlign: "left",
+
+        },
+        data: [{
+            type: "doughnut",
+            startAngle: 60,
+            //innerRadius: 60,
+            indexLabelFontSize: 17,
+            indexLabel: "{label} - #percent%",
+            toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+            dataPoints: dps
+        }]
+    });
+    chart.render();
+    
+    }
+    </script>
+    </head>
+    <body>
+    <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div class="showcase-bottom1">
+    <p><h4>Queries</h4></p>
+    <p><strong>Month: </strong>{{TIME}}</p>
+    <p><strong>Var1: </strong>{{VAR1}}</p>
+    <p><strong>Var2: </strong>{{VAR2}}</p>
+    <p><strong>Var3: </strong>{{VAR3}}</p>
+    <p><strong>Group by: </strong>{{Groupby}}</p> 
+    <p><center><h6>Execution time: {{perf_time}} ms</h6></center></p>
+    </div>   
+{%endblock%}

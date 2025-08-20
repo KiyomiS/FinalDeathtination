@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+  
+{% block content%}
+<style>
+    .vert {
+       margin-bottom: 6cm;
+    }
+  </style>
+<div class="animate__animated animate__slideInDown">
+<p><h4>Parameters</h4></p>
+<p><h6>Race: {{race}}<br>Sex: {{sex}}<br>Age: {{age}}<br>Month of death: {{month}}<br>Manner of death: {{cause}}</h6></p>
+</div>
+<div class="showcase-bottom2">
+<p class ="vert"><center><h2>Entry with parameters have been inserted.</h2></center></p>
+</div>
+{%endblock%}
